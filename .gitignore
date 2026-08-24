@@ -1,0 +1,12 @@
+# Virtual Environment
+plat/
+venv/
+.env/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Environment Variables
+.env
