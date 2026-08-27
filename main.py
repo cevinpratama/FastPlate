@@ -12,7 +12,6 @@ ocr_engine = PaddleOCR(use_angle_cls=True, lang='en', enable_mkldnn=False)
 
 def preprocess_image(image_pil):
 
-    
     img_np = np.array(image_pil.convert("RGB"))
     img_bgr = cv2.cvtColor(img_np, cv2.COLOR_RGB2BGR)
 
@@ -25,7 +24,6 @@ def preprocess_image(image_pil):
         interpolation=cv2.INTER_CUBIC
     )
 
-    # Tambahkan padding
     img_padded = cv2.copyMakeBorder(
         img_upscaled,
         top=20,
